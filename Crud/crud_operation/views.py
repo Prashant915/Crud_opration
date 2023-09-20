@@ -12,7 +12,7 @@ def registration(request):
             pw=fm.cleaned_data['password']
             reg=user(name=nm,email=em,password=pw)
             reg.save()
-            
+            fm=adding_data()    
     else:
         fm=adding_data()
     return render(request,'addshow.html',{"form":fm,'stu':stud})
