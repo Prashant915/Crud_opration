@@ -1,0 +1,15 @@
+{% extends 'crudop.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-8">
+        <h4 class="alert alert-info"> Update Student</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-success" value="Update">
+            <a href="{% url 'registration' %}" class="btn btn-danger"> Back</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}
